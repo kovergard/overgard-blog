@@ -1,15 +1,15 @@
----
-layout: post-image
-title: "It's 10 p.m. - Do you know what your Conditional Access policies are doing?"
-date: 2026-01-13
-tags: 
-    - Conditional-access
-    - Automation 
-    - PowerShell
-image: /assets/images/pexels-mikhail-nilov-6963062.jpg
-image_alt: people-night-smartphone-dark-693062
-image_caption: Photo by Mikhail Nilov
----
++++
+title = "It's 10 p.m. - Do you know what your Conditional Access policies are doing?"
+description = 'On the importance of naming Conditional Access policies in a consistant and descriptive way.'
+summary = "If policy display names don't capture intent, it's easy to lose track of what your Conditional Access policies do. I wrote a PowerShell script that analyzes each policy and suggests clear, consistent names based on policy content - helping teams keep names aligned with configuration over time."
+slug = 'automating-ca-policy-names'
+date = 2026-01-13
+tags = ['Conditional-Access','Automation','PowerShell']
+[cover]
+  image = 'pexels-mikhail-nilov-6963062.jpg'
+  alt = 'people-night-smartphone-dark-693062'
+  caption = 'Photo by Mikhail Nilov'
++++
 
 **TL;DR:** If policy display names don't capture intent, it's easy to lose track of what your Conditional Access policies do. I wrote a PowerShell script that analyzes each policy and suggests clear, consistent names based on policy content - helping teams keep names aligned with configuration over time.
 
@@ -25,7 +25,7 @@ The root causes are common:
 
 Because CA policies lack a description field, the only practical way to document intent in the portal is to use a meaningful display name.
 
-{% include lightbox.html src="ca-policy-naming-convention.jpg" data="ca-policy-naming-convention" %}
+![ca-policy-naming-convention](ca-policy-naming-convention.jpg)
 
 ## Common naming approaches
 
@@ -92,7 +92,7 @@ Connect-MgGraph -Scopes Policy.Read.All,Application.Read.All,Group.Read.All
 
 For the following examples, a set of sample policies are used.
 
-{% include lightbox-border.html src="ca-policy-sample-set.png" data="ca-policy-sample-set" %}
+![ca-policy-sample-set](ca-policy-sample-set.png)
 
 ### Default suggestions
 
@@ -102,7 +102,7 @@ Run without parameters (uses default pattern):
 .\Get-ConditionalAccessPolicyNameSuggestion.ps1
 ```
 
-{% include lightbox.html src="ca-policy-suggestion-default.png" data="ca-policy-suggestion-default" %}
+{{< lightbox src="ca-policy-suggestion-default.png" alt="CA policy suggestion" >}}
 
 * Names consistently show key configuration details.
 * A serial prefix enables sorting by persona.
@@ -117,7 +117,7 @@ $Pattern = '{SerialNumber} - {TargetResource}: {Response} For {Persona} On {Netw
 .\Get-ConditionalAccessPolicyNameSuggestion.ps1 -NamePattern $Pattern
 ```
 
-{% include lightbox.html src="ca-policy-suggestion-microsoftlearn.png" data="ca-policy-suggestion-microsoftlearn" %}
+{{< lightbox src="ca-policy-suggestion-microsoftlearn.png" alt="CA policy suggestion like from Microsoft Learn" >}}
 
 ### Make it yours
 
@@ -127,8 +127,7 @@ Want compact names or different delimiters?
 $Pattern = '{SerialNumber}.{TargetResource}.{Network}.{Condition}.{Response}'
 .\Get-ConditionalAccessPolicyNameSuggestion.ps1 -NamePattern $Pattern -Condense -KeepSerialNumbers
 ```
-
-{% include lightbox.html src="ca-policy-suggestion-compact.png" data="ca-policy-suggestion-compact" %}
+{{< lightbox src="ca-policy-suggestion-compact.png" alt="Compact CA policy suggestion" >}}
 
 ## Moving beyond suggestions - careful updates
 
