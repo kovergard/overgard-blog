@@ -7,3 +7,6 @@
 # OS/editor junk
 .DS_Store
 Thumbs.db
+
+# Hugo generated resources
+/resources/_gen/
