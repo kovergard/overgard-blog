@@ -1,0 +1,26 @@
+/* Simple lightbox overlay */
+.hugo-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+/* Shown state */
+.hugo-lightbox-overlay.active {
+  display: flex;
+}
+
+/* Image inside lightbox */
+.hugo-lightbox-overlay img {
+  max-width: 95vw;
+  max-height: 95vh;
+  box-shadow: 0 0 20px black;
+  cursor: zoom-out;
+}
