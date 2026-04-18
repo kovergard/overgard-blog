@@ -19,6 +19,8 @@ enableRobotsTXT = true
   defaultTheme = "auto"
   disableThemeToggle = false
 
+  customCSS = ["css/extended.css"]
+
 [menu]
   [[menu.main]]
     name = "Archives"
