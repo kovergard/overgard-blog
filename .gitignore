@@ -1,0 +1,9 @@
+# Hugo build output
+/public/
+
+# Hugo build lock
+/.hugo_build.lock
+
+# OS/editor junk
+.DS_Store
+Thumbs.db

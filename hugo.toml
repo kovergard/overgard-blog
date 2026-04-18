@@ -1,3 +1,30 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "http://localhost/"
+title = "& Blog"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+
+[params]
+  env = "development"
+  title = "& Blog"
+  description = "A blog about Microsoft infrastructure, identity management and automation."
+  author = "Kåre Overgård"
+
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowToc = true
+  TocOpen = false
+
+  defaultTheme = "auto"
+  disableThemeToggle = false
+
+[menu]
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 10
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
