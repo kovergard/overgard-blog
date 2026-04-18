@@ -1,8 +1,20 @@
+/* Adjust site width */
 :root {
   --main-width: 1000px;
 }
-
 .main,
 .page,
 .post-content {
   max-width: var(--main-width);
+
+/* Scale down cover images on list pages */
+.post-entry .entry-cover {
+    max-height: 240px;
+}
+
+.post-entry .entry-cover img {
+    height: 240px;
+    width: 100%;
+    object-fit: contain;
+}
+
