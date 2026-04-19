@@ -1,6 +1,6 @@
 baseURL: "https://blog.overgard.dk/"
 title: "& Blog"
-paginate: 5
+# paginate: 5 # deprecated
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -15,7 +15,7 @@ buildExpired: false
 #  minifyOutput: true
 
 params:
-  env: development
+  # env: development # Let PaperMod handle it.
   title: "& Blog"
   description: "A blog about Microsoft infrastructure, identity management and automation."
   keywords: [Blog, Microsoft, Entra, "Active Directory", Automation, PowerShell]
