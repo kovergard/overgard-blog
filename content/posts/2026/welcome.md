@@ -1,9 +1,9 @@
-+++
-date = '2026-01-08'
-title = 'Welcome'
-tags = ['general']
-slug = 'welcome'
-+++
+---
+date: 2026-01-08
+title: Welcome
+tags:
+  - general
+---
 
 Welcome to the blog!
 
