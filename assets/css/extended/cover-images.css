@@ -1,4 +1,15 @@
-/* Scale down cover images on list pages */
+/* First (special) post on home page */
+.first-entry .entry-cover {
+    max-height: 360px;
+}
+
+.first-entry .entry-cover img {
+    height: 360px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* All other posts */
 .post-entry .entry-cover {
     max-height: 240px;
 }
@@ -8,4 +19,3 @@
     width: 100%;
     object-fit: contain;
 }
-
