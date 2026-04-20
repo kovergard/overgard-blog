@@ -127,7 +127,7 @@ menu:
     - name: Tags
       url: tags/
       weight: 20  
-    - name: Portfolio (danish)
+    - name: Portfolio (Danish)
       url: https://overgard.dk
       weight: 30
 
