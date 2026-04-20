@@ -5,7 +5,7 @@ description: A PowerShell module for producing a consolidated and exportable vie
 
 summary: EntraReporter is a PowerShell module that reports effective and future Entra ID role assignments by consolidating PIM schedules, eligible roles and group-based access into a single, automation-friendly output.
 
-date: 2026-04-20
+date: 2026-04-22
 
 categories:
   - Identity Security
@@ -21,9 +21,10 @@ tags:
   - reporting
 
 cover:
-  image: pexels-mikhail-nilov-6963062.jpg
-  alt: people-night-smartphone-dark-693062
-  caption: Photo by [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov/)
+  image: israel-palacio-ImcUkZ72oUs-unsplash.jpg
+  alt: Abstract representation of multiple connections between two systems
+  caption: Photo by [israel palacio]https://unsplash.com/@othentikisra/) on [Unsplash](https://unsplash.com/photos/two-square-blue-led-lights-ImcUkZ72oUs)
+
 
 draft: true
 ---
