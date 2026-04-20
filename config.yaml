@@ -35,7 +35,7 @@ params:
   ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
-  disableSpecial1stPost: false
+  disableSpecial1stPost: true
   disableScrollToTop: false
   comments: false
   hidemeta: false
@@ -55,30 +55,7 @@ params:
     icon: /assets/favicon32.png
     iconHeight: 32
 
-# profile-mode
-#  profileMode:
-#    enabled: false # needs to be explicitly set
-#    title: ExampleSite
-#    subtitle: "This is subtitle"
-#    imageUrl: ""
-#    imageWidth: 120
-#    imageHeight: 120
-#    imageTitle: my image
-#    buttons:
-#      - name: Posts
-#        url: posts
-#      - name: Tags
-#        url: tags
-
-  # home-info mode
-#  homeInfoParams:
-#    Title: "Welcome \U0001F44B"
-#    Content: |
-#      This is my blog about Microsoft infrastructure, identity management and automation.
-#
-#      If you have questions or comments, feel free to reach out to me:
-
-  socialIcons:
+  contactIcons:
     - name: github
       url: "https://github.com/kovergard"
     - name: LinkedIn
@@ -122,15 +99,12 @@ menu:
     - name: Archive
       url: archives
       weight: 10
-    - name: About
+    - name: About Me
       url: about/
       weight: 15
     - name: Tags
       url: tags/
       weight: 20  
-    - name: Portfolio (Danish)
-      url: https://overgard.dk
-      weight: 30
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
