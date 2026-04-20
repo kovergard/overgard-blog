@@ -32,7 +32,7 @@ The root causes are common:
 
 Because CA policies lack a description field, the only practical way to document intent in the portal is to use a meaningful display name.
 
-![ca-policy-naming-convention](ca-policy-naming-convention.jpg)
+{{< figure align=center src="ca-policy-naming-convention.jpg" >}}
 
 ## Common naming approaches
 
