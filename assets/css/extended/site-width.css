@@ -1,0 +1,9 @@
+/* Adjust site width */
+:root {
+  --main-width: 1000px;
+}
+.main,
+.page,
+.post-content {
+  max-width: var(--main-width);
+

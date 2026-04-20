@@ -1,2 +1,2 @@
-
-<script src="/js/glightbox.min.js"></script>
+{{ $js := resources.Get "js/lightbox.js" | minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}"></script>

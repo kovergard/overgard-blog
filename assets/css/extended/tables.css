@@ -1,0 +1,12 @@
+
+/* Header row */
+.post-content thead th {
+  border-bottom: 2px solid var(--border);
+  background-color: color-mix(in srgb, var(--code-bg) 85%, transparent);
+  font-weight: 600;
+}
+
+/* Zebra striping – cells only */
+.post-content tbody tr:nth-child(even) td {
+  background-color: var(--code-bg);
+}
