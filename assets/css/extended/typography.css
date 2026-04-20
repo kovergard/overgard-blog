@@ -1,0 +1,22 @@
+/* Blog post content only */
+.post-content {
+  font-size: 0.95rem;   /* default ~1.05rem */
+  line-height: 1.65;
+}
+
+/* Headings inside posts */
+.post-content h1 { font-size: 1.8rem; }
+.post-content h2 { font-size: 1.5rem; }
+.post-content h3 { font-size: 1.25rem; }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .post-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .post-content h1 { font-size: 1.6rem; }
+  .post-content h2 { font-size: 1.35rem; }
+  .post-content h3 { font-size: 1.15rem; }
+}
