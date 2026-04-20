@@ -3,8 +3,8 @@ date: 2026-01-08
 title: Welcome
 cover:
   image: pexels-markus-winkler-1430818-12188488.jpg
-  alt: people-night-smartphone-dark-693062
-  caption: Photo by [Markus Winkler](https://www.pexels.com/photo/close-up-of-a-rusty-sign-saying-open-welcome-12188488/)
+  alt: Close-up of a rusty sign saying open welcome
+  caption: Photo by [Markus Winkler](https://www.pexels.com/@1430818/)
 ---
 
 Welcome to the blog!
