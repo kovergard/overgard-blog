@@ -11,16 +11,19 @@ categories:
   - Identity Security
 
 tags:
-  - Conditional Access
-  - Microsoft Entra ID
-  - Azure AD
-  - Automation
-  - PowerShell
+  - entra-id
+  - azure-ad
+  - pim
+  - privileged-identity-management
+  - role-assignments
+  - identity-security
+  - powershell
+  - reporting
 
 cover:
   image: pexels-mikhail-nilov-6963062.jpg
   alt: people-night-smartphone-dark-693062
-  caption: Photo by Mikhail Nilov
+  caption: Photo by [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov/)
 
 draft: true
 ---
