@@ -28,7 +28,7 @@ params:
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowWordCount: false
   ShowRssButtonInSectionTermList: true
@@ -69,12 +69,12 @@ params:
 #        url: tags
 
   # home-info mode
-  homeInfoParams:
-    Title: "Welcome \U0001F44B"
-    Content: |
-      This is my blog about Microsoft infrastructure, identity management and automation.
-
-      If you have questions or comments, feel free to reach out to me:
+#  homeInfoParams:
+#    Title: "Welcome \U0001F44B"
+#    Content: |
+#      This is my blog about Microsoft infrastructure, identity management and automation.
+#
+#      If you have questions or comments, feel free to reach out to me:
 
   socialIcons:
     - name: github
@@ -121,10 +121,13 @@ menu:
     - name: Archive
       url: archives
       weight: 10
+    - name: About
+      url: about/
+      weight: 15
     - name: Tags
       url: tags/
       weight: 20  
-    - name: Portfolio (Danish)
+    - name: Portfolio (danish)
       url: https://overgard.dk
       weight: 30
 
