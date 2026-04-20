@@ -7,10 +7,6 @@ cover:
   caption: Photo by [Markus Winkler](https://www.pexels.com/@1430818/)
 ---
 
-Welcome to the blog!
+This blog focuses on Microsoft Entra ID, Conditional Access, Privileged Identity Management and identity-related automation.
 
-I needed a place for sharing tips, scripts and experiences from my work with Microsoft infrastructure, identity management and automation, so I decided to spin up this blog.
-
-My aim is to help other people working with Microsoft technologies.
-
-More information can be fount in the [About](/about) section.
+The content is written from real-world consulting work, with an emphasis on how access actually works, not how the portal presents it.
