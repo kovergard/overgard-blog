@@ -1,10 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+  /* -------------------------------------------------
+     Ignore mobile / touch devices completely
+     ------------------------------------------------- */
+  if (window.matchMedia("(pointer: coarse)").matches) {
+    return;
+  }
 
-  /* ---------- Setup ---------- */
-
+  /* -------------------------------------------------
+     Setup
+     ------------------------------------------------- */
   const overlay = document.createElement("div");
   overlay.className = "hugo-lightbox-overlay";
   document.body.appendChild(overlay);
+
+  const closeButton = document.createElement("button");
+  closeButton.className = "hugo-lightbox-close";
+  closeButton.setAttribute("aria-label", "Close");
+  closeButton.innerHTML = "×";
+  overlay.appendChild(closeButton);
 
   const overlayImage = document.createElement("img");
   overlay.appendChild(overlayImage);
@@ -12,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let scale = 1;
   let translateX = 0;
   let translateY = 0;
-
   let isDragging = false;
   let startX = 0;
   let startY = 0;
@@ -21,8 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const MAX_SCALE = 5;
   const ZOOM_STEP = 0.1;
 
-  /* ---------- Helpers ---------- */
-
+  /* -------------------------------------------------
+     Helpers
+     ------------------------------------------------- */
   function updateTransform() {
     overlayImage.style.transform =
       `translate(${translateX}px, ${translateY}px) scale(${scale})`;
@@ -45,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function clampPan() {
     const rect = overlayImage.getBoundingClientRect();
-
     const maxX = Math.max(0, (rect.width - window.innerWidth) / 2);
     const maxY = Math.max(0, (rect.height - window.innerHeight) / 2);
 
@@ -59,12 +71,15 @@ document.addEventListener("DOMContentLoaded", function () {
     resetTransform();
   }
 
-  /* ---------- Events ---------- */
+  /* -------------------------------------------------
+     Events
+     ------------------------------------------------- */
 
   /* Open lightbox */
   document.querySelectorAll("a.lightbox").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
+
       overlayImage.src = link.getAttribute("href");
       overlay.classList.add("active");
       resetTransform();
@@ -78,7 +93,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* Close on background click */
   overlay.addEventListener("click", e => {
-    if (e.target === overlay) closeLightbox();
+    if (e.target === overlay) {
+      closeLightbox();
+    }
+  });
+
+  /* Close on close button */
+  closeButton.addEventListener("click", e => {
+    e.stopPropagation();
+    closeLightbox();
   });
 
   /* Close on ESC */
@@ -88,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* Zoom */
+  /* Zoom (mouse wheel) */
   overlay.addEventListener("wheel", e => {
     if (!overlay.classList.contains("active")) return;
 
@@ -109,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     isDragging = true;
     startX = e.clientX - translateX;
     startY = e.clientY - translateY;
+
     overlayImage.classList.add("dragging");
     e.preventDefault();
   });
@@ -135,5 +159,4 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     resetTransform();
   });
-
 });
