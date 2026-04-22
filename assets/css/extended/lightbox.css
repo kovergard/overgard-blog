@@ -34,3 +34,15 @@ a.lightbox img {
 .hugo-lightbox-overlay img.dragging {
   cursor: grabbing;
 }
+/* Close button */
+.hugo-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
