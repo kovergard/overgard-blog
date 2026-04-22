@@ -1,21 +1,30 @@
 ---
 title: It's 10 p.m. - Do you know what your Conditional Access policies are doing?
-description: On the importance of naming Conditional Access policies in a consistant and descriptive way.
-summary: If policy display names don't capture intent, it's easy to lose track of what your Conditional Access policies do. I wrote a PowerShell script that analyzes each policy and suggests clear, consistent names based on policy content"
+
+description: Why Conditional Access policy names matter, and how unclear naming leads to security blind spots. A practical look at analysing CA policies and generating consistent, descriptive names using PowerShell.
+
+summary: Poorly named Conditional Access policies make troubleshooting and governance harder than necessary. This post walks through common naming patterns and introduces a PowerShell script that inspects policy configuration and generates consistent, intent-based display name suggestions.
+
 date: 2026-01-13
+
 categories:
   - Identity Security
+
 tags:
-  - Conditional Access
-  - Microsoft Entra ID
-  - Azure AD
-  - Automation
-  - PowerShell
+  - conditional-access
+  - entra-id
+  - azure-ad
+  - identity-security
+  - powershell
+  - automation
+  - governance
+
 aliases: /2026/automating-ca-policy-names/
+
 cover:
   image: pexels-mikhail-nilov-6963062.jpg
   alt: people-night-smartphone-dark-693062
-  caption: Photo by Mikhail Nilov
+  caption: Photo by [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov/)
 ---
 
 **TL;DR:** If policy display names don't capture intent, it's easy to lose track of what your Conditional Access policies do. I wrote a PowerShell script that analyzes each policy and suggests clear, consistent names based on policy content - helping teams keep names aligned with configuration over time.

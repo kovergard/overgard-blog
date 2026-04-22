@@ -1,26 +1,36 @@
-/* Simple lightbox overlay */
+/* Lightbox overlay */
 .hugo-lightbox-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background: rgba(0, 0, 0, 0.9);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 10000;
+  overflow: hidden;
 }
 
-/* Shown state */
+/* Visible state */
 .hugo-lightbox-overlay.active {
   display: flex;
 }
 
-/* Image inside lightbox */
+/* Blog image hover (before opening lightbox) */
+a.lightbox img {
+  cursor: zoom-in;
+}
+
+/* Lightbox image */
 .hugo-lightbox-overlay img {
-  max-width: 95vw;
-  max-height: 95vh;
-  box-shadow: 0 0 20px black;
-  cursor: zoom-out;
+  max-width: none;
+  max-height: none;
+  user-select: none;
+  transform-origin: center center;
+  will-change: transform;
+  cursor: grab;
+}
+
+/* While dragging */
+.hugo-lightbox-overlay img.dragging {
+  cursor: grabbing;
 }

@@ -21,6 +21,8 @@ This blog is a place to document practical, technical experiences from that work
 
 Along the way, I’ve collected a fair number of lessons learned, workarounds, scripts, and the occasional “how did this even happen” story. Writing things down helps me, and if it also helps someone else avoid a problem or save some time, then the blog has served its purpose.
 
+You can read more about my work at my [portfolio site (Danish)](https://overgard.dk).
+
 If you want to get in touch, you can find me here:
 
-{{< social_icons >}}
+{{< contact_icons >}}
